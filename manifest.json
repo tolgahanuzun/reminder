@@ -1,0 +1,24 @@
+{
+  "name": "Reminder",
+  "description" : "Browser Reminder...",
+  "version": "0.1",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "manifest_version": 2,
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Shift+F",
+        "mac": "Shift+F"
+      },
+      "description": "Opens index.html"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "https://*/*",
+    "http://*/*"
+  ]
+}
