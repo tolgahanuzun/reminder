@@ -2,9 +2,27 @@
 <html>
   <head>
     <title> Reminder Extensions </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css" />
+    <link rel="stylesheet" href="/style.css" type="text/css">
+    <script src="/jquery.min.js"></script>
   </head>
-
-  <body>
-    <h1>Reminder Extensions</h1>
+  
+  <body id="reminders">
+      <fieldset>
+          <legend>Reminders</legend>
+      </fieldset>
+    <form method="post" action="">
+      <fieldset>
+        <legend>Reminders-Create</legend>
+        <p id="reminders-url"></p>
+        <div class="form-item">
+          <textarea id="reminders-about" rows="4"></textarea>
+        </div>
+        <div class="form-item">
+          <button class="button" id='save'>Submit</button>
+        </div>
+      </fieldset>
+    </form>
+    <script src="/index.js"></script>
   </body>
 </html>

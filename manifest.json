@@ -9,8 +9,8 @@
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
-        "default": "Shift+F",
-        "mac": "Shift+F"
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
       },
       "description": "Opens index.html"
     }
@@ -18,6 +18,8 @@
   "permissions": [
     "storage",
     "activeTab",
+    "tabs",
+    "contextMenus",
     "https://*/*",
     "http://*/*"
   ]
