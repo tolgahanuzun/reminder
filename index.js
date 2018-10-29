@@ -1,4 +1,5 @@
 var href_url = '';
+var valid = false;
 document.body.onload = function() {
     url = document.getElementById('reminders-url');
     
@@ -12,7 +13,6 @@ document.body.onload = function() {
             console.log(err);
         }
     });
-
 }
 
 document.getElementById("save").onclick = function() {
@@ -23,11 +23,28 @@ document.getElementById("save").onclick = function() {
     text = changeText(href_url)
 };
 
+document.getElementById("remove").onclick = function() {
+    text = document.getElementById('reminders-about').value;
+
+    chrome.storage.sync.get([href_url], function() {
+        valid = true;
+        var url = {};
+        url[href_url] = '';
+        chrome.storage.sync.set(url);
+    });
+    window.close();
+};
+
 function changeText(url) {
     chrome.storage.sync.get([url], function(result) {
         text = Object.entries(result)[0][1];
         if (text) {
             document.getElementById('reminder-text').innerHTML = text;
+            document.getElementById('remove').disabled = false
+        }
+        else {
+            document.getElementById('reminder-text').innerHTML = '';
+            document.getElementById('remove').disabled = true
         }
     });
 }
