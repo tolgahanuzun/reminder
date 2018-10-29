@@ -5,6 +5,9 @@ It is a url-based log application. Created to keep notes for the site you entere
 
 A daily app for the sites you visit daily. Keep notes and remind yourself.
 
+## Examples
+![](/img/example.png)
+
 ## ToDo
 - Notification Level
 - Log level
