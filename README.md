@@ -12,8 +12,13 @@ A daily app for the sites you visit daily. Keep notes and remind yourself.
 ![](/img/example.png)
 
 
-
 ## Todo
 - Notification Level
 - Log level
 - Set the rental period.
+
+
+## Contributing
+- First, we need to agree on an issue. This can be an opened issues or you can open it yourself.
+- You should get the issue code you're dealing with. Template: rm-<issues_id>
+- You can open the branch with this template and send it to the pull request.
